@@ -8,7 +8,6 @@
     <link rel="icon" type="image/x-icon" href="/images/earth.png" />
     <link rel="stylesheet" type="text/css" href="css/greece.css" />
     <style>
-      /* Existing overlay and gallery styles */
       .overlay {
         position: absolute;
         left: 0;
@@ -58,7 +57,7 @@
         background-color: #00aaff;
         padding: 10px 20px;
       }
-
+    
       /* The ul styling to line up links horizontally */
       nav ul {
         margin: 0;
@@ -68,12 +67,12 @@
         align-items: center;
         gap: 12px;
       }
-
+    
       /* Hide the <br> inside ul so it doesn't break layout */
       nav ul br {
         display: none;
       }
-
+    
       /* Style the links inside ul */
       nav ul a.hi1 {
         color: white;
@@ -86,11 +85,11 @@
         font-weight: 500;
         transition: background-color 0.25s;
       }
-
+    
       nav ul a.hi1:hover {
         background-color: rgba(255, 255, 255, 0.3);
       }
-
+    
       /* Container for nav links + hamburger */
       .nav-container {
         display: flex;
@@ -98,7 +97,7 @@
         justify-content: center;
         gap: 20px;
       }
-
+    
       /* Hamburger button styling */
       .hamburger {
         background-color: #0077cc;
@@ -111,7 +110,7 @@
         user-select: none;
         white-space: nowrap;
       }
-
+    
       /* Dropdown menu styling */
       .dropdown-content {
         display: none;
@@ -124,7 +123,7 @@
         right: 20px; /* Align dropdown with hamburger */
         z-index: 9999;
       }
-
+    
       .dropdown-content a {
         display: block;
         padding: 10px 16px;
@@ -139,55 +138,33 @@
       .dropdown-content a:hover {
         background-color: #e0f7ff;
       }
-
+    
       /* Wrapper to position relative for dropdown */
       .dropdown {
         position: relative;
       }
 
-      /* Mobile view adjustments */
+      /* Mobile-friendly popup arrow buttons */
       @media (max-width: 768px) {
-        nav {
-          padding: 4px 8px;
-          overflow-x: auto;
+        #prevBtn,
+        #nextBtn {
+          font-size: 28px !important;     /* Smaller arrow icons */
+          top: 50% !important;            /* Keep vertically centered */
+          padding: 10px 15px !important;  /* Larger tap area */
         }
 
-        /* Keep nav-container horizontal */
-        .nav-container {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          gap: 8px;
+        #prevBtn {
+          left: 10px !important;           /* Move closer to left edge */
         }
 
-        /* Nav links horizontal and smaller */
-        nav ul {
-          display: flex !important;
-          flex-direction: row !important;
-          gap: 6px;
-          padding-left: 0;
-          margin: 0;
-          overflow-x: auto;
-          white-space: nowrap;
-        }
-
-        /* Smaller font and padding so it fits better */
-        nav ul a.hi1 {
-          font-size: 13px;
-          padding: 6px 8px;
-        }
-
-        /* Smaller hamburger button */
-        .hamburger {
-          padding: 6px 10px;
-          font-size: 16px;
-          flex-shrink: 0;
+        #nextBtn {
+          right: 10px !important;          /* Move closer to right edge */
         }
       }
     </style>
   </head>
   <body>
-
+  
   <nav>
     <div class="nav-container">
       <ul>
@@ -202,7 +179,7 @@
         <a class="hi1" href="berlin.html">Welcome to Germany</a>
         <a class="hi1" href="prague.html">Welcome to Canada</a>
       </ul>
-
+  
       <div class="dropdown">
         <button class="hamburger" id="hamburgerBtn">☰ More</button>
         <div id="moreDropdown" class="dropdown-content">
@@ -405,6 +382,6 @@
       }
     });
   </script>
-
+  
   </body>
 </html>
