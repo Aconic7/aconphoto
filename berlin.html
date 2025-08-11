@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -147,36 +145,28 @@
       position: relative;
     }
 
-    /* Mobile view adjustments */
+    /* Mobile view adjustments - smaller nav */
     @media (max-width: 768px) {
       nav {
-        padding: 8px 10px;
+        padding: 4px 8px; /* smaller padding */
       }
 
-      /* Show all nav links vertically */
       nav ul {
-        display: flex !important;
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 0;
+        gap: 8px; /* smaller gap */
       }
 
-      /* Make links bigger and easier to tap */
       nav ul a.hi1 {
-        font-size: 18px;
-        padding: 12px 16px;
-        display: block;
+        font-size: 14px;  /* smaller font */
+        padding: 4px 8px; /* less padding */
       }
 
-      /* Keep hamburger visible */
       .hamburger {
-        display: inline-block !important;
+        font-size: 16px;  /* smaller font */
+        padding: 4px 8px; /* less padding */
       }
 
-      /* Stack nav-container vertically */
       .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 10px; /* smaller gap */
       }
     }
   </style>
