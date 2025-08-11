@@ -145,28 +145,36 @@
       position: relative;
     }
 
-    /* Mobile view adjustments - smaller nav */
+    /* Mobile view adjustments - fit nav in screen with wrapping */
     @media (max-width: 768px) {
       nav {
-        padding: 4px 8px; /* smaller padding */
+        padding: 6px 10px;
       }
 
       nav ul {
-        gap: 8px; /* smaller gap */
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
       }
 
       nav ul a.hi1 {
-        font-size: 14px;  /* smaller font */
-        padding: 4px 8px; /* less padding */
+        font-size: 13px;
+        padding: 5px 8px;
+        white-space: nowrap;
       }
 
       .hamburger {
-        font-size: 16px;  /* smaller font */
-        padding: 4px 8px; /* less padding */
+        font-size: 16px;
+        padding: 5px 10px;
       }
 
       .nav-container {
-        gap: 10px; /* smaller gap */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
       }
     }
   </style>
