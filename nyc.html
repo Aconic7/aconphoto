@@ -149,15 +149,54 @@
       .dropdown {
         position: relative;
       }
+
+.nav-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  flex: 1;
+}
+.nav-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+/* Keep the 'More' button fixed at side */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Compact mobile styling */
+@media (max-width: 768px) {
+  nav {
+    padding: 6px 10px;
+  }
+  nav ul {
+    gap: 6px;
+  }
+  nav ul a.hi1 {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  .hamburger {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+}
+
+      
     </style>
     </head>
     <body>
     
     <nav>
-      <div class="nav-container">
-        <ul>
-          <br>
-          <a class="hi1" href="hello.html">Home</a>
+  <div class="nav-container">
+    <div class="nav-scroll">
+      <ul>
+        <br>
+        <a class="hi1" href="hello.html">Home</a>
         <a class="hi1" href="japan.html">Welcome to Japan</a>
         <a class="hi1" href="korea.html">Welcome to Korea</a>
         <a class="hi1" href="greece.html">Welcome to Greece</a>
@@ -165,19 +204,21 @@
         <a class="hi1" href="nyc.html">Welcome to NYC</a>
         <a class="hi1" href="la.html">Welcome to LA</a>
         <a class="hi1" href="berlin.html">Welcome to Germany</a>
-        <a class="hi1" href="prague.html">Welcome to Prague</a>
-        </ul>
-    
-        <div class="dropdown">
-          <button class="hamburger" id="hamburgerBtn">☰ More</button>
-          <div id="moreDropdown" class="dropdown-content">
-            <a href="page1.html">Page 1</a>
-            <a href="page2.html">Page 2</a>
-            <a href="page3.html">Page 3</a>
-          </div>
-        </div>
+        <a class="hi1" href="prague.html">Welcome to Canada</a>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button class="hamburger" id="hamburgerBtn">☰ More</button>
+      <div id="moreDropdown" class="dropdown-content">
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
     
     <script>
       const btn = document.getElementById('hamburgerBtn');
