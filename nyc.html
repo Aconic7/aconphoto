@@ -150,41 +150,22 @@
         position: relative;
       }
 
-.nav-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  flex: 1;
-}
-.nav-scroll::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome/Safari */
-}
 
-/* Keep the 'More' button fixed at side */
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
+/* Normal desktop nav stays as it is — no scroll */
 
-/* Compact mobile styling */
+/* Mobile-only horizontal scroll */
 @media (max-width: 768px) {
-  nav {
-    padding: 6px 10px;
+  .nav-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex: 1;
   }
-  nav ul {
-    gap: 6px;
-  }
-  nav ul a.hi1 {
-    padding: 6px 10px;
-    font-size: 14px;
-  }
-  .hamburger {
-    padding: 6px 10px;
-    font-size: 18px;
+  .nav-scroll::-webkit-scrollbar {
+    display: none;
   }
 }
+
 
       
     </style>
