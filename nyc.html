@@ -151,20 +151,25 @@
       }
 
 
-/* Normal desktop nav stays as it is — no scroll */
-
-/* Mobile-only horizontal scroll */
 @media (max-width: 768px) {
-  .nav-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    flex: 1;
+  nav {
+    padding: 4px 6px;
   }
-  .nav-scroll::-webkit-scrollbar {
-    display: none;
+  nav ul {
+    gap: 4px;
+    flex-wrap: wrap; /* Allow wrapping if it still doesn't fit */
+    justify-content: center; /* Center them if wrapped */
+  }
+  nav ul a.hi1 {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+  .hamburger {
+    padding: 4px 8px;
+    font-size: 16px;
   }
 }
+
 
 
       
